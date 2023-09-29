@@ -280,6 +280,12 @@ export enum IOSSettings {
   App = 'app',
 
   /**
+   * Opens your app-specific notification settings screen. On iOS versions lower than 16 will have the same behavior as App.
+   * 
+   */
+  AppNotification = 'app_notification',
+
+  /**
    * Used to set if and when the screen should be automatically locked.
    */
   AutoLock = 'autoLock',
