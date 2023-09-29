@@ -54,7 +54,9 @@ public class NativeSettingsPlugin: CAPPlugin {
         } else if option == "app_notification" {
             if #available(iOS 16.0, *) {
             settingsUrl = URL(string: UIApplication.openNotificationSettingsURLString)
-            } else {
+            else if (iOS 15.4, *){
+            settingsUrl = URL(string: UIApplicationOpenNotificationSettingsURLString)
+            }} else {
             settingsUrl = URL(string: UIApplication.openSettingsURLString)
             }
         }
