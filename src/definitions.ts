@@ -280,7 +280,7 @@ export enum IOSSettings {
   App = 'app',
 
   /**
-   * Opens your app-specific notification settings screen. On iOS versions lower than 16 will have the same behavior as App.
+   * Opens your app-specific notification settings screen. On iOS versions lower than 15.4 will have the same behavior as App.
    * 
    */
   AppNotification = 'app_notification',
