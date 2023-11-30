@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import Capacitor
 
 @objc(NativeSettingsPlugin)
@@ -53,10 +54,10 @@ public class NativeSettingsPlugin: CAPPlugin {
             settingsUrl = URL(string: UIApplication.openSettingsURLString)
         } else if option == "app_notification" {
             if #available(iOS 16.0, *) {
-            settingsUrl = URL(string: UIApplication.openNotificationSettingsURLString)
-            else if (iOS 15.4, *){
+                settingsUrl = URL(string: UIApplication.openNotificationSettingsURLString)
+            } else if #available(iOS 15.4, *){
             settingsUrl = URL(string: UIApplicationOpenNotificationSettingsURLString)
-            }} else {
+            } else {
             settingsUrl = URL(string: UIApplication.openSettingsURLString)
             }
         }
